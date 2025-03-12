@@ -77,6 +77,7 @@ def mnist_train():
             loss.backward()
             optimizer.step()
             wandb.log({"loss": loss.item()})
+            wandb.log({"custom_value": 0.3})
 
 
 if __name__ == "__main__":
